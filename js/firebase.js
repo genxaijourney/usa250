@@ -19,6 +19,7 @@ import {
   onValue,
   push,
   child,
+  remove,
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
@@ -48,4 +49,4 @@ export function ensureSignedIn() {
   });
 }
 
-export { ref, set, get, update, onValue, push, child, serverTimestamp };
+export { ref, set, get, update, onValue, push, child, remove, serverTimestamp };

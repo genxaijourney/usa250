@@ -1,6 +1,6 @@
 /* USA 250 — Admin (Dan-only). Password-gated, seed + toggle live. */
 
-import { db, ref, get, set, update, ensureSignedIn } from "./firebase.js";
+import { db, ref, get, set, update, remove, ensureSignedIn } from "./firebase.js";
 import { seedQuestions } from "./questions.js";
 import { $, el, clear } from "./ui.js";
 
@@ -81,13 +81,27 @@ async function renderApp() {
     }
   });
 
+  const resetBtn = el("button", { class: "btn", style: { background: "var(--red-deep)", color: "var(--cream)", borderColor: "var(--brown-ink)" }}, "🧹 RESET PLAYER DATA");
+  resetBtn.addEventListener("click", async () => {
+    if (!confirm("Wipe ALL leaderboard players and their scores?\n\nThis clears /players/ and /scores/ so everyone starts fresh at zero.\n\nQuestions, difficulty picks, and the LIVE toggle are NOT touched.\n\nContinue?")) return;
+    seedMsg.textContent = "Wiping player data…";
+    try {
+      const mod = await import("./firebase.js");
+      await mod.remove(mod.ref(mod.db, "players"));
+      await mod.remove(mod.ref(mod.db, "scores"));
+      seedMsg.textContent = "✅ Player data cleared. Leaderboard is empty. Family can play fresh.";
+    } catch (e) {
+      seedMsg.textContent = "Error wiping: " + e.message;
+    }
+  });
+
   const logoutBtn = el("button", { class: "btn btn-ghost" }, "LOCK");
   logoutBtn.addEventListener("click", () => { sessionStorage.removeItem(SESSION_KEY); renderGate(); });
 
   screen.append(
     el("div", { class: "poster-card" },
       el("h2", { style: { fontFamily: "'Alfa Slab One'", color: "var(--old-glory-blue)" }}, "Admin Dashboard"),
-      el("div", { class: "actions" }, seedBtn, forceSeedBtn, liveBtn, logoutBtn),
+      el("div", { class: "actions" }, seedBtn, forceSeedBtn, liveBtn, resetBtn, logoutBtn),
       seedMsg
     )
   );
