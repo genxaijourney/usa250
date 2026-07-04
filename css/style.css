@@ -588,3 +588,63 @@ body.usa250 {
 }
 
 .center { text-align: center; }
+
+/* ---------- Sound toggle button (floating, top-right) ---------- */
+.usa250 .sfx-toggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  font-family: "Alfa Slab One", serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--brown-ink);
+  background: var(--cream);
+  border: 3px solid var(--brown-ink);
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(38, 38, 87, 0.25);
+  -webkit-tap-highlight-color: transparent;
+}
+.usa250 .sfx-toggle:active { transform: translateY(1px); }
+.usa250 .sfx-toggle .sfx-icon { font-size: 20px; line-height: 1; }
+.usa250 .sfx-toggle .sfx-label { line-height: 1; }
+.usa250 .sfx-toggle.sfx-off {
+  background: var(--old-glory-red);
+  color: var(--cream);
+  border-color: var(--red-deep);
+}
+@media (max-width: 560px) {
+  .usa250 .sfx-toggle {
+    top: 10px; right: 10px;
+    padding: 10px 12px; font-size: 12px;
+  }
+  .usa250 .sfx-toggle .sfx-label { display: none; }
+}
+
+/* ---------- Milestone feedback badge ---------- */
+.usa250 .feedback-milestone {
+  background: linear-gradient(90deg,
+    rgba(212, 160, 23, 0.25),
+    rgba(178, 34, 52, 0.25),
+    rgba(60, 59, 110, 0.25),
+    rgba(212, 160, 23, 0.25));
+  background-size: 300% 100%;
+  color: var(--old-glory-red);
+  border-color: var(--mustard);
+  animation: milestonePulse 1.2s ease infinite, milestoneSlide 3s linear infinite;
+  font-size: 24px;
+  text-shadow: 0 2px 0 var(--mustard);
+}
+@keyframes milestonePulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.03); }
+}
+@keyframes milestoneSlide {
+  from { background-position: 0% 50%; }
+  to   { background-position: 300% 50%; }
+}
