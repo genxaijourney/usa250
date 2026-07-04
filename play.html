@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#B22234" />
+  <title>Play &mdash; USA 250 Trivia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Special+Elite&family=Ultra&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body class="usa250">
+  <div class="stars-bg" aria-hidden="true"></div>
+  <canvas id="fireworks-canvas" aria-hidden="true"></canvas>
+
+  <div class="play-container">
+    <header class="poster-header">
+      <div class="header-stripes"></div>
+      <div class="header-inner">
+        <div class="year-mark small">1776 &mdash; 2026</div>
+        <h1 class="poster-title">USA <span class="two-fifty">250</span></h1>
+        <div class="poster-tagline">A TRIVIA TRIBUTE TO AMERICA</div>
+      </div>
+      <div class="header-stripes"></div>
+    </header>
+
+    <div class="play-layout">
+      <main id="screen" class="stage">
+        <div class="poster-card center">
+          <p>Loading the trivia&hellip;</p>
+        </div>
+      </main>
+
+      <aside class="leaderboard-panel">
+        <div class="lb-header">
+          <span class="lb-star">&#9733;</span>
+          <h3>Top Patriots</h3>
+          <span class="lb-star">&#9733;</span>
+        </div>
+        <div id="leaderboard" class="lb-list"></div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="footer">
+    &#127881; Happy 250th, America &#127881;
+  </footer>
+
+  <script type="module" src="./js/play.js"></script>
+</body>
+</html>

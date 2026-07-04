@@ -1,0 +1,57 @@
+{
+  "rules": {
+    ".read":  "auth != null",
+    ".write": "auth != null",
+
+    "questions": {
+      ".read":  "auth != null",
+      ".write": "auth != null",
+      "$qid": {
+        ".validate": "newData.hasChildren(['order','category','text','correct','distractors'])",
+        "order":       { ".validate": "newData.isNumber()" },
+        "category":    { ".validate": "newData.isString() && newData.val().length <= 60" },
+        "text":        { ".validate": "newData.isString() && newData.val().length <= 500" },
+        "correct":     { ".validate": "newData.isString() && newData.val().length <= 300" },
+        "learnMore":   { ".validate": "newData.isString() || newData.val() == null" },
+        "distractors": { ".validate": "newData.hasChildren(['easy','medium','hard']) || newData.val() == null" },
+        "$other":      { ".validate": false }
+      }
+    },
+
+    "players": {
+      ".read":  "auth != null",
+      "$uid": {
+        ".write": "auth != null && auth.uid == $uid",
+        ".validate": "newData.hasChildren(['name'])",
+        "name":       { ".validate": "newData.isString() && newData.val().length <= 60" },
+        "totalScore": { ".validate": "newData.isNumber() || newData.val() == null" },
+        "difficulty": { ".validate": "newData.isString() || newData.val() == null" },
+        "createdAt":  { ".validate": "newData.isNumber() || newData.val() == null" },
+        "lastSeen":   { ".validate": "newData.isNumber() || newData.val() == null" },
+        "$other":     { ".validate": false }
+      }
+    },
+
+    "scores": {
+      ".read":  "auth != null",
+      "$uid": {
+        ".write": "auth != null && auth.uid == $uid",
+        "$qid": {
+          ".validate": "newData.hasChildren(['chosenIndex','correct'])",
+          "chosenIndex": { ".validate": "newData.isNumber()" },
+          "correct":     { ".validate": "newData.isBoolean()" },
+          "difficulty":  { ".validate": "newData.isString() || newData.val() == null" },
+          "answeredAt":  { ".validate": "newData.isNumber() || newData.val() == null" },
+          "$other":      { ".validate": false }
+        }
+      }
+    },
+
+    "config": {
+      ".read":  "auth != null",
+      ".write": "auth != null",
+      "live":            { ".validate": "newData.isBoolean() || newData.val() == null" },
+      "totalQuestions":  { ".validate": "newData.isNumber() || newData.val() == null" }
+    }
+  }
+}

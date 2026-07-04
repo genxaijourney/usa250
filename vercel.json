@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/play",  "destination": "/play.html" },
+    { "source": "/admin", "destination": "/admin.html" }
+  ]
+}

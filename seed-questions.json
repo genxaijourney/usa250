@@ -1,0 +1,392 @@
+[
+  {
+    "id": "found_001",
+    "category": "Founding",
+    "order": 1,
+    "text": "Contrary to popular belief, how many of the 56 signers of the Declaration of Independence actually signed it on July 4, 1776?",
+    "correct": "Only 2 — John Hancock and Charles Thomson, the President and Secretary of Congress",
+    "distractors": {
+      "easy": ["All 56, in one dramatic ceremony", "Zero — nobody signed until 1783", "13, one for each colony"],
+      "medium": ["All 56, as depicted in the famous John Trumbull painting", "About 40 of them, with stragglers signing later", "13, one delegate from each colony"],
+      "hard": ["Only 3 — Hancock, Thomson, and Benjamin Franklin", "About 40, with the rest signing on August 2", "9 — the members of the drafting committee"]
+    },
+    "learnMore": "Most delegates actually signed the parchment on August 2, 1776, after the document was formally 'engrossed' (calligraphed for archives). John Hancock famously signed first in a huge flowing script — hence 'put your John Hancock on it.' Some delegates were still signing months later; Thomas McKean of Delaware may not have signed until 1777. The iconic Trumbull painting completed in 1818 actually depicts the June 28 presentation of the DRAFT to Congress, not the signing at all."
+  },
+  {
+    "id": "found_002",
+    "category": "Founding",
+    "order": 2,
+    "text": "The Continental Congress officially adopted the Declaration of Independence on which date?",
+    "correct": "July 4, 1776",
+    "distractors": {
+      "easy": ["December 25, 1776 (Christmas Day)", "November 11, 1776 (Veterans Day)", "September 17, 1776"],
+      "medium": ["July 2, 1776 (the day John Adams thought would be celebrated)", "August 2, 1776", "June 7, 1776 (Lee's original resolution)"],
+      "hard": ["July 2, 1776 — when independence was actually voted on", "July 8, 1776 — the first public reading", "August 2, 1776 — when most signatures were affixed"]
+    },
+    "learnMore": "John Adams predicted July 2 would be 'celebrated by succeeding generations as the great anniversary Festival' because that's when the actual vote for independence passed. July 4 is when Congress adopted the final wording of the Declaration itself. Adams was so wrong about the date he reportedly refused to attend July 4 celebrations later in life. Fun coincidence: both Adams and Jefferson died on July 4, 1826 — exactly 50 years after."
+  },
+  {
+    "id": "found_003",
+    "category": "Founding",
+    "order": 3,
+    "text": "Who was the primary author of the Declaration of Independence?",
+    "correct": "Thomas Jefferson (with editing by Franklin, Adams, and the full Congress)",
+    "distractors": {
+      "easy": ["George Washington", "Paul Revere", "King George III (dictated to a scribe)"],
+      "medium": ["Benjamin Franklin", "John Adams", "James Madison"],
+      "hard": ["John Adams — as head of the Committee of Five", "Benjamin Franklin — the eldest and most experienced writer", "Richard Henry Lee — who introduced the resolution"]
+    },
+    "learnMore": "The 'Committee of Five' was Jefferson, John Adams, Benjamin Franklin, Roger Sherman, and Robert Livingston. Adams later claimed he pushed Jefferson to write it because Jefferson could 'write ten times better than I can.' Congress then made ~86 edits — the most famous being the removal of Jefferson's long anti-slavery passage blaming King George for the slave trade, cut to keep Southern colonies on board."
+  },
+  {
+    "id": "revwar_001",
+    "category": "Revolutionary War",
+    "order": 4,
+    "text": "Which Revolutionary War battle is considered the turning point because it convinced France to formally ally with the American colonies?",
+    "correct": "Battle of Saratoga (1777)",
+    "distractors": {
+      "easy": ["The Boston Tea Party (a party, not a battle)", "The Battle of Alamo", "The Battle of Gettysburg"],
+      "medium": ["Battle of Bunker Hill (1775)", "Battle of Trenton (1776)", "Battle of Yorktown (1781)"],
+      "hard": ["Battle of Trenton — Washington's Christmas Day crossing of the Delaware", "Battle of Yorktown — the war's final major engagement", "Battle of Monmouth — first major open-field victory"]
+    },
+    "learnMore": "British General John Burgoyne surrendered his entire army of 5,800 troops after two battles at Saratoga, NY in September and October 1777. When news reached Paris, King Louis XVI's foreign minister was convinced the Americans could actually win. France signed treaties of alliance and commerce in February 1778 — bringing gunpowder, uniforms, warships, and eventually 12,000 French troops. Without Saratoga, France waits; without France, Yorktown probably doesn't happen."
+  },
+  {
+    "id": "revwar_002",
+    "category": "Revolutionary War",
+    "order": 5,
+    "text": "Which French general, only 19 years old when he arrived, became one of Washington's most trusted commanders?",
+    "correct": "Marquis de Lafayette",
+    "distractors": {
+      "easy": ["Napoleon Bonaparte", "Louis XIV", "Charles de Gaulle"],
+      "medium": ["Comte de Rochambeau", "Baron von Steuben", "Admiral de Grasse"],
+      "hard": ["Comte de Rochambeau — commander of the French expeditionary force", "Baron de Kalb — the Bavarian who died at Camden", "François-Joseph Paul de Grasse — the naval commander at Yorktown"]
+    },
+    "learnMore": "The Marquis de Lafayette was so eager to fight for American liberty that he bought his own ship, defied a direct order from King Louis XVI not to sail, and arrived in South Carolina in June 1777. Washington adopted him almost as a son. He returned to France after the war, was later imprisoned during the French Revolution, and made a triumphant tour of all 24 states in 1824–25 as America's honored guest. Every state has a Lafayette county, park, or square."
+  },
+  {
+    "id": "revwar_003",
+    "category": "Revolutionary War",
+    "order": 6,
+    "text": "The war ended after which 1781 battle where Cornwallis's British army was trapped and forced to surrender?",
+    "correct": "Battle of Yorktown, Virginia",
+    "distractors": {
+      "easy": ["The Battle of Waterloo", "The Battle of Bunker Hill", "The Battle of Normandy"],
+      "medium": ["Battle of Saratoga, New York", "Battle of Charleston, South Carolina", "Battle of Bunker Hill, Massachusetts"],
+      "hard": ["Battle of Guilford Court House, North Carolina", "Battle of Cowpens, South Carolina", "Battle of Monmouth, New Jersey"]
+    },
+    "learnMore": "The Franco-American siege of Yorktown lasted three weeks. General Cornwallis was pinned against the York River with 8,000 troops while Admiral de Grasse's French fleet blocked the Chesapeake and prevented British rescue. Cornwallis surrendered on October 19, 1781. His band reportedly played 'The World Turned Upside Down' as the redcoats marched out. Fighting continued sporadically for two more years until the Treaty of Paris was signed September 3, 1783."
+  },
+  {
+    "id": "const_001",
+    "category": "Constitution & Amendments",
+    "order": 7,
+    "text": "The Bill of Rights — the first ten amendments to the Constitution — was ratified in what year?",
+    "correct": "1791",
+    "distractors": {
+      "easy": ["1776", "1492", "1969"],
+      "medium": ["1776 — the same year as independence", "1787 — the same year the Constitution was signed", "1803 — after Marbury v. Madison"],
+      "hard": ["1789 — when they were proposed by Madison", "1787 — when the Constitution was ratified", "1795 — the same year as the 11th Amendment"]
+    },
+    "learnMore": "James Madison proposed 12 amendments in the very first Congress in 1789 to satisfy Anti-Federalist demands. Ten were ratified by three-fourths of the states on December 15, 1791 — which we now celebrate as Bill of Rights Day. One of the two rejected in 1791 was later ratified in 1992 (203 years later!) as the 27th Amendment, restricting congressional pay raises."
+  },
+  {
+    "id": "const_002",
+    "category": "Constitution & Amendments",
+    "order": 8,
+    "text": "How many articles does the original US Constitution have (before any amendments)?",
+    "correct": "Seven",
+    "distractors": {
+      "easy": ["Fifty (one per state)", "Two", "Twenty-seven"],
+      "medium": ["Ten — one for each future Bill of Right", "Three — one per branch of government", "Thirteen — one per original colony"],
+      "hard": ["Three — one per branch, plus a preamble", "Ten — one per structural section", "Twelve — as originally drafted in Philadelphia"]
+    },
+    "learnMore": "The seven articles cover: (I) Legislative branch, (II) Executive branch, (III) Judicial branch, (IV) States' relations to each other, (V) Amendment process, (VI) Federal power / oaths / debt, (VII) Ratification. It's remarkably short — about 4,400 words. The Preamble ('We the People…') is not one of the articles; it's the introduction. Twenty-seven amendments have been added since 1791."
+  },
+  {
+    "id": "const_003",
+    "category": "Constitution & Amendments",
+    "order": 9,
+    "text": "Which Constitutional Article establishes the process for amending the Constitution?",
+    "correct": "Article V",
+    "distractors": {
+      "easy": ["Article Z (there is no such article)", "Article 250", "The Preamble"],
+      "medium": ["Article I", "Article III", "Article VII"],
+      "hard": ["Article I — because Congress proposes amendments", "Article VII — because states ratify them", "The Bill of Rights — as a template"]
+    },
+    "learnMore": "Article V lays out two paths to propose an amendment (two-thirds of both houses of Congress, OR a convention called by two-thirds of state legislatures) and two paths to ratify (three-fourths of state legislatures OR three-fourths of state ratifying conventions). Every one of the 27 amendments has taken the same path — proposed by Congress, ratified by state legislatures — except the 21st (Prohibition repeal), which used state conventions."
+  },
+  {
+    "id": "pres_001",
+    "category": "Presidents",
+    "order": 10,
+    "text": "Which US president served the shortest term in office?",
+    "correct": "William Henry Harrison — 31 days before dying of pneumonia in 1841",
+    "distractors": {
+      "easy": ["Franklin D. Roosevelt (12 years)", "George Washington (8 years)", "Ronald Reagan (8 years)"],
+      "medium": ["James Garfield — 200 days (assassination in 1881)", "Zachary Taylor — 16 months", "Warren G. Harding — 2.5 years"],
+      "hard": ["James Garfield — shot after 4 months, died after 6", "Zachary Taylor — 16 months before dying suddenly of a stomach illness", "John F. Kennedy — 2 years 306 days"]
+    },
+    "learnMore": "Harrison delivered a two-hour inauguration speech (the longest ever, still) on a bitter cold, wet March 4, 1841 — without a hat or coat. He caught what became pneumonia and died April 4. Legend says he was so eager to appear vigorous at 68 (then the oldest to take office) that he wanted no coddling. His vice president John Tyler was the first VP to assume the presidency mid-term, establishing precedent."
+  },
+  {
+    "id": "pres_002",
+    "category": "Presidents",
+    "order": 11,
+    "text": "Who was the only US president to serve more than two terms?",
+    "correct": "Franklin D. Roosevelt (elected 4 times: 1932, 1936, 1940, 1944)",
+    "distractors": {
+      "easy": ["George Washington", "Ronald Reagan", "Barack Obama"],
+      "medium": ["Theodore Roosevelt", "Woodrow Wilson", "Harry Truman"],
+      "hard": ["Grover Cleveland — served two non-consecutive terms", "Theodore Roosevelt — served nearly two full terms after McKinley's death", "Harry Truman — finished FDR's fourth term plus his own"]
+    },
+    "learnMore": "FDR's four wins broke the two-term precedent George Washington had set voluntarily. He died in office in April 1945, three months into his fourth term. Congress responded with the 22nd Amendment (proposed 1947, ratified 1951), formally limiting presidents to two elected terms. Grover Cleveland is the closest oddity — he served terms 22 and 24, sandwiching Benjamin Harrison."
+  },
+  {
+    "id": "pres_003",
+    "category": "Presidents",
+    "order": 12,
+    "text": "Who was the first US president born in a hospital (rather than at home)?",
+    "correct": "Jimmy Carter (born October 1, 1924 in Wise Sanitarium, Plains, Georgia)",
+    "distractors": {
+      "easy": ["George Washington", "Abraham Lincoln", "Franklin D. Roosevelt"],
+      "medium": ["John F. Kennedy", "Ronald Reagan", "Lyndon B. Johnson"],
+      "hard": ["Bill Clinton (born in a hospital in Hope, Arkansas)", "John F. Kennedy (born in a private nursing home)", "Barack Obama (Kapiolani Medical Center, Honolulu)"]
+    },
+    "learnMore": "Home births were the American norm until well into the 20th century. Every president born before Carter — even relatively modern ones like Franklin D. Roosevelt, Lyndon Johnson, and Ronald Reagan — was born at home. Carter's birth at a small-town Georgia sanitarium (a rural hospital) marked the transition to hospital births as the norm."
+  },
+  {
+    "id": "civwar_001",
+    "category": "Civil War",
+    "order": 13,
+    "text": "Which July 1863 battle, with ~51,000 casualties over three days, is considered the war's turning point?",
+    "correct": "Battle of Gettysburg",
+    "distractors": {
+      "easy": ["Battle of Waterloo", "Battle of Normandy", "Battle of the Bulge"],
+      "medium": ["Battle of Antietam (Sharpsburg)", "First Battle of Bull Run (Manassas)", "Battle of Shiloh"],
+      "hard": ["Battle of Antietam — the bloodiest single day", "Battle of Vicksburg — completed the same week", "Battle of Chancellorsville — Lee's tactical masterpiece"]
+    },
+    "learnMore": "Fought July 1–3, 1863 in southeastern Pennsylvania, Gettysburg stopped Lee's invasion of the North. The battle featured Pickett's Charge on day three — 12,500 Confederates crossing three-quarters of a mile of open ground into Union artillery. About half were killed or wounded. Lee retreated on July 4 (the same day Vicksburg fell to Grant in the West). Lincoln's Gettysburg Address, delivered at the battlefield cemetery dedication four months later, is 272 words long and took about two minutes."
+  },
+  {
+    "id": "civwar_002",
+    "category": "Civil War",
+    "order": 14,
+    "text": "Who was the commanding general of all Union armies at the war's end and later became the 18th president?",
+    "correct": "Ulysses S. Grant",
+    "distractors": {
+      "easy": ["Robert E. Lee", "George Washington", "Dwight Eisenhower"],
+      "medium": ["William Tecumseh Sherman", "George B. McClellan", "Philip Sheridan"],
+      "hard": ["William Tecumseh Sherman — famous for the March to the Sea", "George H. Thomas — the Rock of Chickamauga", "Philip Sheridan — commander of Union cavalry"]
+    },
+    "learnMore": "Grant was made General-in-Chief in March 1864 with the newly revived rank of Lieutenant General (last held by Washington). He accepted Lee's surrender at Appomattox Court House on April 9, 1865, offering generous terms — Confederate officers kept their sidearms and horses, and no war-crimes prosecutions were planned. Grant served as president 1869–1877. His initials 'U.S.' were actually a clerical mistake at West Point — he was born Hiram Ulysses Grant."
+  },
+  {
+    "id": "civwar_003",
+    "category": "Civil War",
+    "order": 15,
+    "text": "At which location did Confederate General Robert E. Lee surrender to Union General Ulysses S. Grant on April 9, 1865?",
+    "correct": "Appomattox Court House, Virginia",
+    "distractors": {
+      "easy": ["The White House", "Independence Hall in Philadelphia", "West Point, New York"],
+      "medium": ["Fort Sumter, South Carolina", "Gettysburg, Pennsylvania", "Richmond, Virginia (the Confederate capital)"],
+      "hard": ["Wilmer McLean's farm at Bull Run, Virginia — where the war started", "Ford's Theatre, Washington DC", "Fortress Monroe, Virginia"]
+    },
+    "learnMore": "In a strange coincidence, farmer Wilmer McLean's Manassas home was in the middle of the First Battle of Bull Run in 1861 — the war's first major battle. He moved 120 miles away to Appomattox Court House for safety. Four years later, both armies converged on his new home for the surrender. As McLean reportedly said: 'The war began in my front yard and ended in my parlor.'"
+  },
+  {
+    "id": "ww_001",
+    "category": "WWI & WWII",
+    "order": 16,
+    "text": "On D-Day (June 6, 1944), American forces landed on which two of the five Normandy beaches?",
+    "correct": "Utah Beach and Omaha Beach",
+    "distractors": {
+      "easy": ["Pearl Harbor and Iwo Jima", "The Alamo and Yorktown", "Gettysburg and Antietam"],
+      "medium": ["Sword and Gold", "Juno and Sword", "Gold and Juno"],
+      "hard": ["Omaha and Juno", "Utah and Sword", "Utah and Gold"]
+    },
+    "learnMore": "The five beaches from west to east were Utah (US), Omaha (US), Gold (British), Juno (Canadian), and Sword (British). Omaha was the bloodiest — high cliffs, dug-in defenders, and rough surf destroyed most of the specialized armor. About 2,000 Americans were killed or wounded on Omaha alone. Utah, by contrast, had lighter defenses and a landing that drifted a mile off-target — which turned out to be an easier stretch of beach."
+  },
+  {
+    "id": "ww_002",
+    "category": "WWI & WWII",
+    "order": 17,
+    "text": "Which date is remembered as the Japanese attack on Pearl Harbor that brought the US into WWII?",
+    "correct": "December 7, 1941",
+    "distractors": {
+      "easy": ["July 4, 1941", "January 1, 1942", "December 25, 1941"],
+      "medium": ["December 8, 1941 (Roosevelt's speech date)", "November 11, 1941", "December 7, 1942"],
+      "hard": ["December 6, 1941 (Hawaii time zone)", "December 8, 1941 (Japan time)", "November 26, 1941 (fleet departure)"]
+    },
+    "learnMore": "The attack began at 7:48 AM Hawaii time on Sunday, December 7, 1941. It lasted 90 minutes, killed 2,403 Americans, wounded 1,178, sank four battleships (Arizona still lies in the harbor as a memorial), and damaged four more. FDR's speech to Congress the next day called it 'a date which will live in infamy' and requested a declaration of war on Japan; Germany and Italy declared war on the US four days later."
+  },
+  {
+    "id": "ww_003",
+    "category": "WWI & WWII",
+    "order": 18,
+    "text": "Who was the Supreme Commander of Allied forces in Europe on D-Day?",
+    "correct": "General Dwight D. Eisenhower (later 34th President)",
+    "distractors": {
+      "easy": ["George Washington", "Ulysses S. Grant", "Winston Churchill"],
+      "medium": ["George S. Patton", "Douglas MacArthur", "Omar Bradley"],
+      "hard": ["Bernard Montgomery — commander of Allied ground forces on the day", "Omar Bradley — commander of the US First Army", "George Marshall — Army Chief of Staff"]
+    },
+    "learnMore": "Eisenhower had never commanded troops in combat before being appointed Supreme Commander in December 1943. He famously drafted a resignation letter the night before D-Day, taking full responsibility if the invasion failed: 'The troops, the air and the navy did all that bravery and devotion to duty could do. If any blame or fault attaches to the attempt, it is mine alone.' He carried it in his wallet for years afterward."
+  },
+  {
+    "id": "cold_001",
+    "category": "Cold War & Space Race",
+    "order": 19,
+    "text": "On July 20, 1969, Neil Armstrong stepped onto the Moon. What were his exact first words?",
+    "correct": "That's one small step for man, one giant leap for mankind",
+    "distractors": {
+      "easy": ["The Eagle has landed", "Houston, we have a problem", "The stars and stripes fly here today"],
+      "medium": ["I claim this Moon for the United States of America", "One giant leap for man, one small step for mankind", "One small step for me, one giant leap for humanity"],
+      "hard": ["That's one small step for a man, one giant leap for mankind — as clearly transmitted", "One small step for man, one giant leap for all mankind", "That's one small step for man, one giant leap for humanity"]
+    },
+    "learnMore": "Armstrong intended to say 'for a man' — meaning himself specifically, in contrast to 'mankind' as a species. Audio analysis suggests he did say 'a,' but the article was lost in radio transmission. He accepted the shorter version as the official quote. He stepped off Eagle at 10:56 PM EDT — an estimated 600 million people watched live, roughly one in five people alive on Earth."
+  },
+  {
+    "id": "cold_002",
+    "category": "Cold War & Space Race",
+    "order": 20,
+    "text": "Which US President committed the nation to landing a man on the Moon 'before this decade is out' in a 1961 speech to Congress?",
+    "correct": "John F. Kennedy",
+    "distractors": {
+      "easy": ["George Washington", "Abraham Lincoln", "Ronald Reagan"],
+      "medium": ["Dwight D. Eisenhower", "Lyndon B. Johnson", "Richard Nixon"],
+      "hard": ["Lyndon B. Johnson (who signed the NASA authorization)", "Dwight D. Eisenhower (who founded NASA in 1958)", "Richard Nixon (in whose term Apollo 11 landed)"]
+    },
+    "learnMore": "Kennedy gave the speech on May 25, 1961 — just six weeks after Yuri Gagarin became the first human in space and three weeks after Alan Shepard became the first American. He gave the more famous 'We choose to go to the Moon' speech at Rice University on September 12, 1962. Kennedy did not live to see the landing; Nixon was president when Apollo 11 touched down on July 20, 1969. NASA hit Kennedy's deadline by 5 months."
+  },
+  {
+    "id": "cold_003",
+    "category": "Cold War & Space Race",
+    "order": 21,
+    "text": "The Berlin Wall — the most iconic symbol of the Cold War divide — fell in what year?",
+    "correct": "1989",
+    "distractors": {
+      "easy": ["1776", "1945 (end of WWII)", "2001"],
+      "medium": ["1961 (when the Wall was built)", "1991 (fall of the Soviet Union)", "1969 (moon landing year)"],
+      "hard": ["1990 (German reunification)", "1988 (Reagan's 'tear down this wall' speech)", "1991 (dissolution of USSR)"]
+    },
+    "learnMore": "The Wall came down on November 9, 1989 after East German officials mistakenly announced that citizens could cross freely 'immediately.' Massive crowds gathered at checkpoints; overwhelmed guards opened the gates rather than shoot. Reagan's famous 'Mr. Gorbachev, tear down this wall!' speech at the Brandenburg Gate was in 1987. Germany officially reunified on October 3, 1990. The Soviet Union dissolved on December 26, 1991."
+  },
+  {
+    "id": "sym_001",
+    "category": "Symbols & Landmarks",
+    "order": 22,
+    "text": "The current 50-star American flag was designed in 1958 by whom?",
+    "correct": "Robert G. Heft — a 17-year-old high school student, for a class project",
+    "distractors": {
+      "easy": ["Betsy Ross", "Uncle Sam", "President Abraham Lincoln"],
+      "medium": ["A team of Army designers", "President Dwight Eisenhower himself", "The Smithsonian Institution"],
+      "hard": ["The US Army Institute of Heraldry", "A descendant of Betsy Ross", "A committee of the Continental Congress (still active in 1958)"]
+    },
+    "learnMore": "Heft designed the 50-star flag as an Ohio high school class project in 1958. He got a B-. When his teacher said the grade would be reconsidered if the flag was ever adopted, Heft mailed it to the White House. President Eisenhower called him personally in August 1959 to say his design had been chosen — and his teacher upgraded the grade to an A. Heft also designed a 51-star flag in case Puerto Rico or DC ever becomes a state."
+  },
+  {
+    "id": "sym_002",
+    "category": "Symbols & Landmarks",
+    "order": 23,
+    "text": "The Statue of Liberty was a gift from which country?",
+    "correct": "France",
+    "distractors": {
+      "easy": ["Canada", "Mexico", "Russia"],
+      "medium": ["Britain (as reconciliation)", "Spain", "The Netherlands"],
+      "hard": ["Britain — as a centennial gift", "Italy — where the sculptor Bartholdi trained", "Egypt — where Bartholdi first proposed a similar statue"]
+    },
+    "learnMore": "The Statue of Liberty was designed by French sculptor Frédéric Auguste Bartholdi and its internal iron framework was engineered by Gustave Eiffel (of Eiffel Tower fame). France paid for the statue (~$250,000); the US paid for the pedestal after Joseph Pulitzer's newspaper campaign raised $100,000 from 120,000 small donations. She was dedicated October 28, 1886 and originally served as a lighthouse. The tablet reads 'JULY IV MDCCLXXVI' — July 4, 1776."
+  },
+  {
+    "id": "sym_003",
+    "category": "Symbols & Landmarks",
+    "order": 24,
+    "text": "The Great Seal of the United States shows a bald eagle holding what in its two talons?",
+    "correct": "Olive branch (13 leaves) in one talon, arrows (13 of them) in the other",
+    "distractors": {
+      "easy": ["A hamburger and fries", "A basketball and football", "Nothing — it's just an eagle"],
+      "medium": ["An American flag and a scroll", "The Declaration of Independence and a musket", "The Constitution and a bell"],
+      "hard": ["Olive branch and a musket", "Wheat sheaf and arrows", "Laurel branch and a torch"]
+    },
+    "learnMore": "The olive branch represents peace, the 13 arrows represent war and defense — the eagle's head faces the olive branch, symbolizing preference for peace. Everything is 13-themed: 13 stripes on the shield, 13 stars in the constellation above, 13 leaves, 13 arrows, 13 letters in 'E Pluribus Unum' (Out of Many, One). The reverse of the Great Seal — with the unfinished pyramid and 'eye of Providence' — is on the back of the $1 bill."
+  },
+  {
+    "id": "geo_001",
+    "category": "Geography",
+    "order": 25,
+    "text": "Which was the 50th state admitted to the Union?",
+    "correct": "Hawaii (August 21, 1959)",
+    "distractors": {
+      "easy": ["Texas", "Puerto Rico", "Washington DC"],
+      "medium": ["Alaska (which came 49th, January 3, 1959)", "Arizona", "Oklahoma"],
+      "hard": ["Alaska — admitted the same year, 7 months earlier", "Arizona — the 48th, in 1912", "Oklahoma — the 46th, in 1907"]
+    },
+    "learnMore": "Alaska was admitted January 3, 1959 as the 49th state. Hawaii followed on August 21, 1959, as the 50th. That's why our current flag with 50 stars became official on July 4, 1960 — flag rules require the star to be added on the July 4 after admission. Puerto Rico, Guam, US Virgin Islands, and other territories are not states. Washington DC is a federal district, not a state."
+  },
+  {
+    "id": "geo_002",
+    "category": "Geography",
+    "order": 26,
+    "text": "What is the tallest mountain in the United States?",
+    "correct": "Denali (formerly Mount McKinley), Alaska — 20,310 feet",
+    "distractors": {
+      "easy": ["The Empire State Building", "The Sears Tower / Willis Tower", "Mount Everest"],
+      "medium": ["Mount Whitney, California (14,505 ft — tallest in contiguous 48)", "Mount Rainier, Washington", "Pikes Peak, Colorado"],
+      "hard": ["Mount Elbert, Colorado (14,440 ft — tallest Rocky)", "Mount Whitney, California (highest in the lower 48)", "Mauna Kea, Hawaii (technically taller from ocean floor)"]
+    },
+    "learnMore": "Denali means 'the tall one' in the Koyukon Athabaskan language. It was named Mount McKinley in 1896 by a gold prospector to honor then-presidential candidate William McKinley. It was officially renamed Denali by President Obama in 2015 (Alaska had already used that name since 1975). Mauna Kea in Hawaii is technically taller if measured from the ocean floor (~33,000 feet), but only 13,803 feet is above sea level."
+  },
+  {
+    "id": "geo_003",
+    "category": "Geography",
+    "order": 27,
+    "text": "Which US national park was the world's first national park, established in 1872?",
+    "correct": "Yellowstone (Wyoming, Montana, Idaho)",
+    "distractors": {
+      "easy": ["Central Park in New York City", "Disney World", "The National Mall"],
+      "medium": ["Yosemite, California", "Grand Canyon, Arizona", "Sequoia, California"],
+      "hard": ["Yosemite — protected earlier in 1864 as a state park, made national in 1890", "Sequoia — established in 1890", "Mackinac Island — the 2nd US national park (1875–1895)"]
+    },
+    "learnMore": "President Ulysses S. Grant signed the Yellowstone Park Protection Act on March 1, 1872 — the first time any national government set aside land specifically to preserve nature for the public. Yosemite Valley was protected earlier (1864) but only as a state park at that time. Yellowstone's geysers (including Old Faithful), hot springs, and wildlife sit atop a massive still-active supervolcano caldera."
+  },
+  {
+    "id": "inn_001",
+    "category": "American Innovation",
+    "order": 28,
+    "text": "Which two Americans made the first sustained powered flight, on December 17, 1903?",
+    "correct": "Orville and Wilbur Wright, at Kitty Hawk, North Carolina",
+    "distractors": {
+      "easy": ["Thomas Edison and Nikola Tesla", "Neil Armstrong and Buzz Aldrin", "Steve Jobs and Bill Gates"],
+      "medium": ["Charles Lindbergh (solo, in 1927)", "Amelia Earhart and Fred Noonan", "Glenn Curtiss and Samuel Langley"],
+      "hard": ["Samuel Langley — the Smithsonian's competitor who crashed nine days before", "Alberto Santos-Dumont — the Brazilian who flew publicly in Paris in 1906", "Glenn Curtiss — who later flew a modified Langley design"]
+    },
+    "learnMore": "The first flight — Orville at the controls — lasted 12 seconds and covered 120 feet. Three more flights followed that day, the longest by Wilbur reaching 852 feet in 59 seconds. The brothers, who ran a bicycle shop in Dayton, Ohio, had spent four years testing gliders and studying wing design. Their key breakthrough was three-axis control (roll, pitch, yaw) using wing warping — still the foundation of modern aircraft."
+  },
+  {
+    "id": "inn_002",
+    "category": "American Innovation",
+    "order": 29,
+    "text": "Who invented the practical incandescent light bulb and founded General Electric?",
+    "correct": "Thomas Edison",
+    "distractors": {
+      "easy": ["Abraham Lincoln", "Benjamin Franklin", "Albert Einstein"],
+      "medium": ["Nikola Tesla", "Alexander Graham Bell", "Guglielmo Marconi"],
+      "hard": ["Joseph Swan — the British inventor with a parallel patent", "Nikola Tesla — Edison's rival in the AC/DC wars", "Lewis Latimer — Edison's Black co-inventor of the carbon filament"]
+    },
+    "learnMore": "Edison held 1,093 US patents. His Menlo Park, NJ 'invention factory' — the world's first industrial R&D lab — also produced the phonograph, the motion picture camera, and the alkaline battery. Lewis Latimer, a Black inventor who worked for Edison, developed the long-lasting carbon filament that made the bulb commercially viable. British inventor Joseph Swan filed a parallel patent — the two eventually merged their British ventures into Ediswan."
+  },
+  {
+    "id": "inn_030",
+    "category": "American Innovation",
+    "order": 30,
+    "text": "The Transcontinental Railroad was completed in 1869 with the driving of the 'Golden Spike' at which location?",
+    "correct": "Promontory Summit, Utah",
+    "distractors": {
+      "easy": ["The White House lawn", "Central Park", "Times Square"],
+      "medium": ["Omaha, Nebraska (the eastern terminus)", "Sacramento, California (the western terminus)", "Chicago, Illinois"],
+      "hard": ["Ogden, Utah — the later junction", "Promontory Point, Utah — commonly but incorrectly named", "Salt Lake City, Utah"]
+    },
+    "learnMore": "The Central Pacific (building east from Sacramento) and Union Pacific (building west from Omaha) met at Promontory Summit, Utah on May 10, 1869. Central Pacific crews were mostly Chinese immigrants; Union Pacific crews were mostly Irish immigrants and Civil War veterans. Four ceremonial spikes were driven (two gold, one silver, one iron-silver-gold alloy) — then removed. A regular iron spike wired to the transcontinental telegraph completed the actual joining and broadcast the news 'DONE.'"
+  }
+]
