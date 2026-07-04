@@ -1,7 +1,7 @@
-/* USA 250 — Trivia game logic.
+/* USA 250 — Trivia game logic (Wave 2).
  * -------------------------------------------------------------
- * Async individual play, difficulty selector (easy/medium/hard),
- * live global leaderboard, Learn More paragraph per question.
+ * Adds patriotic sfx, milestone fireworks (every 10 correct),
+ * iOS audio unlock, and a floating sound toggle button.
  * -------------------------------------------------------------
  */
 
@@ -10,10 +10,13 @@ import {
 } from "./firebase.js";
 import { loadQuestions } from "./questions.js";
 import { $, el, clear, shuffle } from "./ui.js";
+import * as sfx from "./sfx.js";
+import * as fireworks from "./fireworks.js";
 
 const NAME_KEY  = "usa250.playerName";
 const DIFF_KEY  = "usa250.difficulty";
 const INDEX_KEY = "usa250.playIndex";
+const MUTE_KEY  = "usa250.muted";
 
 const CHOICE_LETTERS = ["A", "B", "C", "D"];
 const DIFFICULTIES = ["easy", "medium", "hard"];
@@ -27,10 +30,28 @@ const state = {
   index: 0,
   scores: {},
   answered: {},
-  currentChoices: [],   // shuffled [{text, isCorrect}]
+  currentChoices: []
 };
 
 async function boot() {
+  // Init fireworks canvas
+  const canvasEl = document.getElementById("fireworks-canvas");
+  if (canvasEl) fireworks.init(canvasEl);
+
+  // iOS audio unlock on first user gesture
+  const unlockAudio = () => {
+    sfx.unlock();
+    document.removeEventListener("click", unlockAudio);
+    document.removeEventListener("touchstart", unlockAudio);
+  };
+  document.addEventListener("click", unlockAudio, { once: false });
+  document.addEventListener("touchstart", unlockAudio, { once: false });
+
+  // Restore saved mute preference
+  const savedMuted = localStorage.getItem(MUTE_KEY) === "yes";
+  sfx.setEnabled(!savedMuted);
+  mountMuteButton();
+
   state.user = await ensureSignedIn();
   state.playerId = state.user.uid;
 
@@ -57,6 +78,36 @@ async function boot() {
   render();
 }
 
+/* ---------- Sound toggle button ---------- */
+
+function mountMuteButton() {
+  if (document.getElementById("sfx-toggle")) return;
+  const btn = document.createElement("button");
+  btn.id = "sfx-toggle";
+  btn.className = "sfx-toggle";
+  btn.type = "button";
+  updateMuteButton(btn);
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const nowEnabled = sfx.getEnabled();
+    sfx.setEnabled(!nowEnabled);
+    localStorage.setItem(MUTE_KEY, nowEnabled ? "yes" : "no");
+    updateMuteButton(btn);
+  });
+  document.body.appendChild(btn);
+}
+
+function updateMuteButton(btn) {
+  const on = sfx.getEnabled();
+  btn.setAttribute("aria-label", on ? "Sound ON — tap to mute" : "Sound OFF — tap to unmute");
+  btn.classList.toggle("sfx-off", !on);
+  btn.innerHTML = on
+    ? '<span class="sfx-icon">🔊</span><span class="sfx-label">SOUND ON</span>'
+    : '<span class="sfx-icon">🔇</span><span class="sfx-label">SOUND OFF</span>';
+}
+
+/* ---------- Screens ---------- */
+
 function renderNotLive() {
   const screen = $("#screen"); clear(screen);
   screen.append(
@@ -80,7 +131,6 @@ function renderEmpty() {
 
 function renderSetup() {
   const screen = $("#screen"); clear(screen);
-
   const nameInput = el("input", { placeholder: "Your name (e.g. Aunt Pat)", value: state.playerName || "" });
   const diffPicker = el("div", { class: "difficulty-picker" });
 
@@ -157,6 +207,7 @@ function render() {
 
   const q = state.questions[state.index];
   const already = state.answered[q.id];
+  const myScore = Object.values(state.answered).filter(a => a && a.correct).length;
 
   const screen = $("#screen"); clear(screen);
   const card = el("div", { class: "poster-card" });
@@ -171,7 +222,6 @@ function render() {
 
   const qText = el("div", { class: "q-text" }, q.text);
 
-  // Build the choice set: correct + 3 distractors from selected difficulty
   const distractorSet = q.distractors[state.difficulty] || q.distractors["medium"];
   const choicesRaw = shuffle([
     { text: q.correct, isCorrect: true },
@@ -181,15 +231,10 @@ function render() {
 
   const choicesGrid = el("div", { class: "choices-grid" });
   choicesRaw.forEach((choice, i) => {
-    const btn = el("button", {
-      class: "choice-btn",
-      type: "button",
-      "data-letter": CHOICE_LETTERS[i]
-    }, choice.text);
-    btn.addEventListener("click", () => pick(q, i, choice, choicesGrid, card));
+    const btn = el("button", { class: "choice-btn", type: "button", "data-letter": CHOICE_LETTERS[i] }, choice.text);
+    btn.addEventListener("click", () => pick(q, i, choice, choicesGrid, card, myScore));
     if (already) {
       btn.disabled = true;
-      // Show which one was originally chosen vs correct if this was already answered.
       if (choice.isCorrect) btn.classList.add("correct");
       if (i === already.chosenIndex && !choice.isCorrect) btn.classList.add("wrong");
     }
@@ -199,7 +244,7 @@ function render() {
   card.append(meta, progress, qText, choicesGrid);
 
   if (already) {
-    card.append(renderFeedback(already.correct));
+    card.append(renderFeedback(already.correct, myScore));
     if (q.learnMore) card.append(renderLearnMoreToggle(q.learnMore));
   }
 
@@ -214,15 +259,27 @@ function render() {
   renderLeaderboard();
 }
 
-function renderFeedback(correct) {
-  if (correct) return el("div", { class: "feedback-badge feedback-correct" }, "✨ Correct!");
+function renderFeedback(correct, score) {
+  if (correct) {
+    // Milestone indicator on multiples of 10
+    if (score > 0 && score % 10 === 0) {
+      return el("div", { class: "feedback-badge feedback-correct feedback-milestone" },
+        `🎇 MILESTONE ${score}! 🎇`,
+        el("span", { style: { display: "block", fontSize: "14px", marginTop: "4px", letterSpacing: "2px" }}, `Firework #${score / 10} of 20`)
+      );
+    }
+    return el("div", { class: "feedback-badge feedback-correct" },
+      "✨ Correct!",
+      el("span", { style: { display: "block", fontSize: "14px", marginTop: "4px", letterSpacing: "2px" }}, `Fireworks at ${Math.floor(score / 10) * 10 + 10}`)
+    );
+  }
   return el("div", { class: "feedback-badge feedback-wrong" }, "So close! The correct answer is highlighted.");
 }
 
 function renderLearnMoreToggle(text) {
   const wrap = el("div", { style: { textAlign: "center" } });
   const btn = el("button", { class: "learn-more-toggle" }, "📖 Learn More");
-  const body = el("div", { class: "learn-more-body hidden" }, text);
+  const body = el("div", { class: "learn-more-body" }, text);
   body.style.display = "none";
   btn.addEventListener("click", () => {
     const show = body.style.display === "none";
@@ -233,7 +290,7 @@ function renderLearnMoreToggle(text) {
   return wrap;
 }
 
-async function pick(q, chosenIndex, choice, choicesGrid, card) {
+async function pick(q, chosenIndex, choice, choicesGrid, card, prevScore) {
   const btns = choicesGrid.querySelectorAll(".choice-btn");
   btns.forEach((btn, i) => {
     btn.disabled = true;
@@ -249,19 +306,26 @@ async function pick(q, chosenIndex, choice, choicesGrid, card) {
   });
   state.answered[q.id] = { chosenIndex, correct: !!choice.isCorrect };
 
-  const totalCorrect = Object.values(state.answered).filter(a => a && a.correct).length;
+  const newScore = Object.values(state.answered).filter(a => a && a.correct).length;
   await update(ref(db, "players/" + state.playerId), {
-    totalScore: totalCorrect,
-    lastSeen: serverTimestamp()
+    totalScore: newScore, lastSeen: serverTimestamp()
   });
 
-  // Insert feedback + learn more
+  // Sound + fireworks
+  if (choice.isCorrect) {
+    sfx.playCorrect();
+    if (newScore > 0 && newScore % 10 === 0) {
+      fireworks.celebrateMilestone(newScore / 10);
+    }
+  } else {
+    sfx.playWrong();
+  }
+
   const existingActions = card.querySelector(".actions");
-  const feedback = renderFeedback(!!choice.isCorrect);
+  const feedback = renderFeedback(!!choice.isCorrect, newScore);
   card.insertBefore(feedback, existingActions);
   if (q.learnMore) card.insertBefore(renderLearnMoreToggle(q.learnMore), existingActions);
 
-  // Add NEXT button
   if (!existingActions.querySelector(".btn-primary")) {
     existingActions.append(el("button", { class: "btn btn-primary", onclick: () => { state.index++; persistIndex(); render(); }}, "NEXT →"));
   }
@@ -272,6 +336,8 @@ function persistIndex() { localStorage.setItem(INDEX_KEY, String(state.index)); 
 function renderComplete() {
   const totalCorrect = Object.values(state.answered).filter(a => a && a.correct).length;
   const screen = $("#screen"); clear(screen);
+  // Grand finale firework
+  setTimeout(() => fireworks.celebrate(Math.max(200, totalCorrect * 2)), 400);
   screen.append(
     el("div", { class: "poster-card center" },
       el("h1", { style: { fontFamily: "'Ultra','Alfa Slab One'", fontSize: "36px", color: "var(--old-glory-blue)", textShadow: "2px 2px 0 var(--mustard)" }}, "🎇 You Did It, Patriot!"),
@@ -297,26 +363,22 @@ function renderLeaderboard() {
   const wrap = $("#leaderboard");
   if (!wrap) return;
   clear(wrap);
-
   const players = Object.entries(state.scores)
     .map(([id, p]) => ({ id, ...p }))
     .sort((a, b) => (b.totalScore || 0) - (a.totalScore || 0))
     .slice(0, 30);
-
   if (players.length === 0) {
     wrap.append(el("div", { class: "lb-empty" }, "No scores yet.", el("br"), "Be the first!"));
     return;
   }
-
   players.forEach((p, idx) => {
     const rank = idx + 1;
     const isYou = p.id === state.playerId;
-    const row = el("div", { class: "lb-row" + (isYou ? " you" : "") },
+    wrap.append(el("div", { class: "lb-row" + (isYou ? " you" : "") },
       el("span", { class: "lb-rank" + (rank <= 3 ? " lb-rank-" + rank : "") }, rank + "."),
       el("span", { class: "lb-name" }, (p.name || "Anonymous") + (isYou ? " (you)" : "")),
       el("span", { class: "lb-score" }, String(p.totalScore || 0))
-    );
-    wrap.append(row);
+    ));
   });
 }
 

@@ -50,7 +50,7 @@ async function renderApp() {
   const live = cfgSnap.exists() ? !!cfgSnap.val().live : false;
 
   const seedMsg = el("p", { id: "seed-msg" }, "");
-  const liveBtn = el("button", { class: "btn " + (live ? "btn-primary" : "btn-secondary") }, live ? "🔓 TRIVIA IS LIVE — Click to hide" : "🔒 TRIVIA IS HIDDEN — Click to open");
+  const liveBtn = el("button", { class: "btn " + (live ? "btn-primary" : "btn-secondary") }, live ? "✅ TRIVIA IS LIVE — Click to hide" : "🚫 TRIVIA IS HIDDEN — Click to open");
   liveBtn.addEventListener("click", async () => {
     const cur = await get(ref(db, "config"));
     const now = cur.exists() ? !!cur.val().live : false;
